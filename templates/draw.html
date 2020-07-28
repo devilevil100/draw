@@ -1,0 +1,36 @@
+{% extends"layout2.html" %}
+
+{% block body %}
+
+
+    <div class="flex-container " style="text-align:center;">
+      <h1> DRAW </h1>
+      <div id="options" class ="row">
+        <div class="form-group col">
+        <label> Brush color:</label>
+        <select class="form-control" data-role="select-dropdown"id="color-picker">
+          <option value="black"> Black</option>
+          <option value="red"> Red</option>
+          <option value="blue">Blue</option>
+          <option value="green">Green</option>
+        </select>
+        <label> Brush Size</label>
+        <select class="form-control" data-role="select-dropdown" data-profile="minimal" id="thickness-picker">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3" selected>3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+        </select>
+        <button type="button" class="shadow-none btn text-center col" id="erase" style="color: white; font-size: 20px; background-color: 	#f0802b; border-radius: 10px; margin-top: 48px;">Erase</button>
+        </div>
+      </div>
+      </div>
+    <div class="flex-container ">
+    <svg id="draw" style=" border: 10px solid #f0802b; width:100%; height:85rem; touch-action:none;">
+      </svg>
+    </div>
+{% endblock %}
